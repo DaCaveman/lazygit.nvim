@@ -98,7 +98,7 @@ local function lazygit(path)
     if type(config_path) == "table" then
      config_path = table.concat(config_path, ",")
     end
-    cmd = cmd .. " -ucf '" .. config_path .. "'" -- quote config_path to avoid whitespace errors
+    cmd = cmd .. " -ucf " .. config_path .. " " -- quote config_path to avoid whitespace errors
   end
 
   if path == nil then
